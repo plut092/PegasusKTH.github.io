@@ -106,19 +106,16 @@ function lookup(courseIDorName){ // Originally Patrick/Jing group
         courseArr[i] = temp.courseCode;
       }
     }
-    console.log(courseArr);
     document.write("Here are the courses that are relevant to your searching: ");
   //If there're relavant courses found, generate one button for each course code
     if(courseArr.length>0){
      for(i = 0; i < courseArr.length; i++){
       var path = "" + window.location.href;
-      //console.log(path);
       url=[];
       url = path.split("=");
       url[1] = "=";
       url[2] = courseArr[i];
       finalUrl = url[0] + url[1] + url[2];
-      //console.log(finalURL[0]+finalURL[1]+finalURL[2]);
 
       document.write('<a href = \"' +finalUrl + '\" ><button type="button">'  + courseArr[i] + '</button></a>');
       }

@@ -38,7 +38,7 @@ var listIntegration;
 
 // exports node tree to prereqList.js
 function getRootNode() {
-	return nodifyLookupMAIN("DD2420").buildTree();
+	return listIntegration;
 }
 
 // function is called in graph.html
